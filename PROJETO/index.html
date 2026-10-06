@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nike Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            NIKE
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#ofertas">Ofertas</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Carrinho
+            (<span id="cartCount">0</span>)
+        </button>
+
+    </header>
+
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>JUST DO IT.</h1>
+
+            <p>
+                Encontre seu próximo par favorito.
+            </p>
+
+            <a href="#produtos" class="hero-button">
+                Comprar agora
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <main class="container" id="produtos">
+
+        <h2 class="section-title">
+            Produtos em destaque
+        </h2>
+
+
+        <div class="filters">
+
+            <button
+                class="filter-button active"
+                onclick="filterProducts('todos', this)"
+            >
+                Todos
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterProducts('tenis', this)"
+            >
+                Tênis
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterProducts('roupas', this)"
+            >
+                Roupas
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterProducts('acessorios', this)"
+            >
+                Acessórios
+            </button>
+
+        </div>
+
+
+        <div
+            class="products"
+            id="products"
+        ></div>
+
+    </main>
+
+
+    <!-- CARRINHO -->
+
+    <aside
+        class="cart"
+        id="cart"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Seu carrinho
+            </h2>
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems">
+
+            <p>
+                Seu carrinho está vazio.
+            </p>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <h3>
+                Total:
+                R$
+                <span id="cartTotal">
+                    0,00
+                </span>
+            </h3>
+
+            <button
+                class="checkout"
+                onclick="checkout()"
+            >
+                Finalizar compra
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <footer>
+
+        <p>
+            © 2026 Nike Store
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
